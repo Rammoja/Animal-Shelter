@@ -1,0 +1,32 @@
+<h2>All Animals</h2>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>admission date</td>
+        <td>Status</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @animals.each { |animal| %>
+      <tr>
+        <td><%= animal.name %></td>
+        <td><%= animal.age %></td>
+        <td><%= animal.admission date %></td>
+        <td><%= animal.status %></td>
+        <td>
+          <button>
+            Edit
+          </button>
+          <button>
+            Delete
+          </button>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</section>
