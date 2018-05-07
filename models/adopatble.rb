@@ -27,4 +27,17 @@ class Adoptable
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
     end
-  end
+
+    def self.all()
+      sql = "SELECT * FROM adoptables"
+      results = SqlRunner.run( sql )
+      return results.map { |adoptable| Adoptable.new( adoptable ) }
+    end
+
+
+    def self.delete_all()
+      sql = "DELETE FROM adoptables"
+      SqlRunner.run( sql )
+    end
+
+end

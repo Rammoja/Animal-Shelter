@@ -12,17 +12,31 @@ class Breed
 
   def save()
     sql = "INSERT INTO breeds
-    (
-      breed,
 
-    )
+      (breed)
+
+
     VALUES
-    (
-      $1
-    )
+    ($1)
+
     RETURNING id"
     values = [@breed]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  def self.all()
+    sql = "SELECT * FROM breeds"
+    results = SqlRunner.run( sql )
+    return results.map { |breed| Breed.new( breed ) }
+  end
+
+
+  def self.delete_all()
+    sql = "DELETE FROM breeds"
+    SqlRunner.run( sql )
+  end
+
+
+
 end

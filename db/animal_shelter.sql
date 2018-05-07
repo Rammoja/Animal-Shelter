@@ -1,12 +1,12 @@
 DROP TABLE adoptables;
-DROP TABLE breeds;
 DROP TABLE animals;
+DROP TABLE breeds;
 DROP TABLE owners;
 
 CREATE TABLE breeds
 (
   id SERIAL4 primary key,
-  breeds VARCHAR(255)
+  breed VARCHAR(255)
 );
 
 CREATE TABLE animals
