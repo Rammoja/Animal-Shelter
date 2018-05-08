@@ -14,12 +14,14 @@
 
         <td>Breed</td>
 
+
+
       </tr>
     </thead>
     <tbody>
       <% @animals.each { |animal| %>
       <tr>
-        <td><%= animal.name %></td>
+        <td> <a href="/animals/ <%= animal.id %>"> <%= animal.name %></a></td>
 
         <td><%= animal.age %></td>
 
@@ -29,13 +31,13 @@
 
         <td><%= animal.get_breed_name_by_id  %></td>
 
+
+
         <td>
 
-          <form class="" action="/animals/<%= animal.id  %>/edit" method="get">
-            <input type="submit"  value="update">
-          </form>
+
         </td>
-        
+
       </tr>
       <% } %>
     </tbody>

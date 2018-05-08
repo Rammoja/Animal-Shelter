@@ -8,23 +8,16 @@
 
         <td>Contact Details</td>
 
-        <td> Adopted </td>
-
       </tr>
     </thead>
     <tbody>
       <% @owners.each { |owner| %>
       <tr>
-        <td><%= owner.name %></td>
+        <td> <a href="/owners/ <%= owner.id %>"><%=  owner.name %> </a></td>
 
         <td><%= owner.contact_details %></td>
 
 
-        <td>
-          <form class="" action="/owners/<%= owner.id  %>/edit" method="get">
-            <input type="submit"  value="add Animal">
-          </form>
-        </td>
       </tr>
       <% } %>
     </tbody>

@@ -56,6 +56,7 @@ class Animal
     return result['breed']
   end
 
+
   def update()
       sql = "UPDATE animals
       SET

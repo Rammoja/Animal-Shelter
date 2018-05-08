@@ -1,4 +1,4 @@
-DROP TABLE adoptables;
+DROP TABLE adoptions;
 DROP TABLE animals;
 DROP TABLE breeds;
 DROP TABLE owners;
@@ -26,7 +26,7 @@ CREATE TABLE owners
   contact_details VARCHAR(255) not null
 );
 
-CREATE TABLE adoptables
+CREATE TABLE adoptions
 (
   id SERIAL4 primary key,
   owner_id INT4 references owners(id),

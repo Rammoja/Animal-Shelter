@@ -27,6 +27,13 @@ class Owner
     @id = results.first()['id'].to_i
   end
 
+  def self.find( id )
+      sql = "SELECT * FROM owners WHERE id = $1"
+      values = [id]
+      owner = SqlRunner.run( sql, values )
+      result = Owner.new( owner.first )
+      return result
+    end
 
   def self.all()
     sql = "SELECT * FROM owners"
@@ -40,8 +47,5 @@ class Owner
     SqlRunner.run( sql )
   end
 
-  def add_animal()
-    sql = "SELECT * FROM animals"
-    results = SqlRunner.run( sql )
-    return results.map { |animal| animal.new( animal) }
+
 end
