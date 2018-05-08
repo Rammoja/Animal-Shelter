@@ -40,6 +40,8 @@ class Owner
     SqlRunner.run( sql )
   end
 
-
-  
+  def add_animal()
+    sql = "SELECT * FROM animals"
+    results = SqlRunner.run( sql )
+    return results.map { |animal| animal.new( animal) }
 end
