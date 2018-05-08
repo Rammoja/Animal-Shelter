@@ -1,0 +1,32 @@
+<h2>All Owners</h2>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+
+        <td>Contact Details</td>
+
+        <td> Adopted </td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @owners.each { |owner| %>
+      <tr>
+        <td><%= owner.name %></td>
+
+        <td><%= owner.contact_details %></td>
+
+
+        <td>
+          <form class="" action="/owners/<%= owner.id  %>/edit" method="get">
+            <input type="submit"  value="add Animal">
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</section>

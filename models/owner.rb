@@ -40,4 +40,6 @@ class Owner
     SqlRunner.run( sql )
   end
 
+
+  
 end

@@ -5,26 +5,37 @@
     <thead>
       <tr>
         <td>Name</td>
+
         <td>Age</td>
+
         <td>admission date</td>
+
         <td>Status</td>
+
+        <td>Breed</td>
+
       </tr>
     </thead>
     <tbody>
       <% @animals.each { |animal| %>
       <tr>
         <td><%= animal.name %></td>
+
         <td><%= animal.age %></td>
-        <td><%= animal.admission date %></td>
+
+        <td><%= animal.admission_date %></td>
+
         <td><%= animal.status %></td>
+
+        <td><%= animal.get_breed_name_by_id  %></td>
+
         <td>
-          <button>
-            Edit
-          </button>
-          <button>
-            Delete
-          </button>
+
+          <form class="" action="/animals/<%= animal.id  %>/edit" method="get">
+            <input type="submit"  value="update">
+          </form>
         </td>
+        
       </tr>
       <% } %>
     </tbody>

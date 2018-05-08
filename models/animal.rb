@@ -29,6 +29,14 @@ class Animal
     @id = results.first()['id'].to_i
   end
 
+  def self.find( id )
+      sql = "SELECT * FROM animals WHERE id = $1"
+      values = [id]
+      animal = SqlRunner.run( sql, values )
+      result = Animal.new( animal.first )
+      return result
+    end
+
   def self.all()
     sql = "SELECT * FROM animals"
     results = SqlRunner.run( sql )
@@ -40,6 +48,31 @@ class Animal
     sql = "DELETE FROM animals"
     SqlRunner.run( sql )
   end
+
+  def get_breed_name_by_id
+    sql = "SELECT breed FROM breeds WHERE id = $1"
+    values = [@breed_id]
+    result = SqlRunner.run(sql, values).first
+    return result['breed']
+  end
+
+  def update()
+      sql = "UPDATE animals
+      SET
+      (
+        name,
+        age,
+        status
+      ) =
+      (
+        $1, $2, $3
+      )
+      WHERE id = $3"
+      values = [@name, @age, @status ]
+      SqlRunner.run( sql, values )
+    end
+
+
 
 
 

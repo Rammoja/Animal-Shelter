@@ -1,0 +1,20 @@
+Edit form
+<form method ="post" action="/animals/<%= @animal.id %>/edit">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" value="<%= @animal.name  %>">
+
+  <label for="age">age:</label>
+  <input type="text" name="age" id="age" value="<%= @animal.age  %>">
+
+  <label for="status">status:</label>
+  <input type="text" name="status" id="status" value="<%= @animal.status  %>">
+
+  <label for="admission_date">admission_date:</label>
+  <input type="text" name="admission_date" id="admission_date" value="<%= @animal.admission_date %>">
+
+<input type="submit"  value="Submit">
+    </select>
+
+
+</form>
