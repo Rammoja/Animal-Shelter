@@ -19,12 +19,12 @@ get '/adoptions/new' do
 end
 
 post '/adoptions' do
-  adoption = Adoption.new(params)
-  adoptions.save
-  # redirect to("/bitings")
+  @adoption = Adoption.new(params)
+  @adoption.save
+  redirect to("/adoptions")
 end
 
 post '/adoptions/:id/delete' do
   Adoption.delete(params[:id])
-  # redirect to("/bitings")
+  redirect to("/adoptions")
 end

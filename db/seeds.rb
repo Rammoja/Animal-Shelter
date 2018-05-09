@@ -82,8 +82,9 @@ adoption1.save()
 adoption2 = Adoption.new({
   "owner_id" => owner2.id,
   "animal_id" => animal3.id,
-  "adoption_date" => "22/5/2018"
+  "adoption_date" => "2/6/2018"
   })
 adoption2.save()
+
 binding.pry
 nil

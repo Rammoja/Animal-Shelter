@@ -45,17 +45,6 @@ class Adoption
       return result.name
     end
 
-
-
-
-  # def get_name_by_id
-  #   sql = "SELECT owner FROM owners INTO JOIN WHERE id = $1"
-  #   values = [@owner_id]
-  #   result = SqlRunner.run(sql, values).first
-  #   return result['owner']
-  # end
-
-
   def self.find( id )
     sql = "SELECT * FROM adoptions WHERE id = $1"
     values = [id]
@@ -75,6 +64,13 @@ class Adoption
   def self.delete_all()
     sql = "DELETE FROM adoptions"
     SqlRunner.run( sql )
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM adoptions
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
   end
 
 end

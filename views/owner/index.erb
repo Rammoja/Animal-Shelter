@@ -5,21 +5,18 @@
     <thead>
       <tr>
         <td>Name</td>
-
-        <td>Contact Details</td>
-
+        <p class="btn--wrapper">
+          <a class="btn btn--action" href="/owners/new">New Owner</a>
+        </p>
       </tr>
     </thead>
     <tbody>
       <% @owners.each { |owner| %>
-      <tr>
-        <td> <a href="/owners/ <%= owner.id %>"><%=  owner.name %> </a></td>
+        <tr>
+          <td> <a href="/owners/ <%= owner.id %>"><%=  owner.name %> </a></td>
 
-        <td><%= owner.contact_details %></td>
-
-
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
-</section>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </section>

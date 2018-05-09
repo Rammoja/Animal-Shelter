@@ -58,21 +58,21 @@ class Animal
 
 
 
-  def update()
-      sql = "UPDATE animals
-      SET
-      (
-        name,
-        age,
-        status
-      ) =
-      (
-        $1, $2, $3
-      )
-      WHERE id = $3"
-      values = [@name, @age, @status ]
-      SqlRunner.run( sql, values )
-    end
+  # def update()
+  #     sql = "UPDATE animals
+  #     SET
+  #     (
+  #       name,
+  #       age,
+  #       status
+  #     ) =
+  #     (
+  #       $1, $2, $3
+  #     )
+  #     WHERE id = $3"
+  #     values = [@name, @age, @status ]
+  #     SqlRunner.run( sql, values )
+  #   end
 
 
 

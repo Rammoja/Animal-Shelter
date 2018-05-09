@@ -12,9 +12,10 @@ get '/owners' do
   @owners = Owner.all()
   erb(:"owner/index")
 end
+
 #NEW
 get '/owners/new' do
-  #get the form for creating new animal
+  erb :"owner/new"
 end
 
 #SHOW
@@ -24,8 +25,9 @@ erb(:"owner/show")
 end
 
 #CREATE
-post '/Owners' do
-
+post '/owners' do
+  Owner.new(params).save
+  redirect to '/owners'
 end
 
 #EDIT

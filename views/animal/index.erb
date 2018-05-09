@@ -6,14 +6,9 @@
       <tr>
         <td>Name</td>
 
-        <td>Age</td>
-
-        <td>admission date</td>
-
-        <td>Status</td>
-
-        <td>Breed</td>
-
+        <p class="btn--wrapper">
+          <a class="btn btn--action" href="/animals/new">New Animal</a>
+        </p>
 
 
       </tr>
@@ -23,13 +18,6 @@
       <tr>
         <td> <a href="/animals/ <%= animal.id %>"> <%= animal.name %></a></td>
 
-        <td><%= animal.age %></td>
-
-        <td><%= animal.admission_date %></td>
-
-        <td><%= animal.status %></td>
-
-        <td><%= animal.get_breed_name_by_id  %></td>
 
 
 

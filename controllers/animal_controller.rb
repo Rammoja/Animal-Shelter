@@ -14,7 +14,7 @@ end
 
 #NEW
 get '/animals/new' do
-  #get the form for creating new animal
+  erb :"animal/new"
 end
 
 #SHOW
@@ -25,7 +25,8 @@ end
 
 #CREATE
 post '/animals' do
-
+  Animal.new(params).save
+  redirect to '/animals'
 end
 
 #EDIT
