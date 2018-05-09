@@ -1,7 +1,7 @@
 <h1>Adoptions</h1>
 
 <% for adoption in @adoptions  %>
-<p>Owner id;<%= adoption.owner_id%></p>
+<p>Owner: <%= adoption.owner%></p>
 <p>Animal id<%= adoption.animal_id  %></p>
 <p>Adoption Date<%= adoption.adoption_date%></p>
 <% end  %>

@@ -27,12 +27,32 @@ class Adoption
     @id = results.first()['id'].to_i
   end
 
-  def get_name_by_id
-    sql = "SELECT breed FROM breeds WHERE id = $1"
-    values = [@breed_id]
-    result = SqlRunner.run(sql, values).first
-    return result['breed']
-  end
+  def owner()
+      sql = "SELECT name FROM owners
+      WHERE id = $1"
+      values = [@owner_id]
+      results = SqlRunner.run( sql, values )
+      result = Owner.new( results.first )
+      return result.name
+    end
+
+    # def zombie()
+    #   sql = "SELECT * FROM zombies
+    #   WHERE id = $1"
+    #   values = [@zombie_id]
+    #   results = SqlRunner.run( sql, values )
+    #   return Zombie.new( results.first )
+    # end
+
+
+
+
+  # def get_name_by_id
+  #   sql = "SELECT owner FROM owners INTO JOIN WHERE id = $1"
+  #   values = [@owner_id]
+  #   result = SqlRunner.run(sql, values).first
+  #   return result['owner']
+  # end
 
 
   def self.find( id )

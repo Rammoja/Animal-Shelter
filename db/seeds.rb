@@ -85,3 +85,5 @@ adoption2 = Adoption.new({
   "adoption_date" => "22/5/2018"
   })
 adoption2.save()
+binding.pry
+nil
