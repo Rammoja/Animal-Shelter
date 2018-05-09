@@ -30,5 +30,6 @@ CREATE TABLE adoptions
 (
   id SERIAL4 primary key,
   owner_id INT4 references owners(id),
-  animal_id INT4 references animals(id)
+  animal_id INT4 references animals(id),
+  adoption_date VARCHAR(255) not null
 );

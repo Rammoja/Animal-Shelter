@@ -1,23 +1,12 @@
-<h1>Adopted!</h1>
+<h1>Adoptions</h1>
 
-<form action="/adoptions" method="post">
-  <label>
-  Select a animal:
-    <select name="animal_id">
-      <% for animal in @animals %>
-      <option value="<%= animal.id %>"><%= animal.name %></option>
-      <% end %>
-    </select>
-  </label>
+<% for adoption in @adoptions  %>
+<p>Owner id;<%= adoption.owner_id%></p>
+<p>Animal id<%= adoption.animal_id  %></p>
+<p>Adoption Date<%= adoption.adoption_date%></p>
+<% end  %>
 
-  <label>
-    Select a owner:
-    <select name="owner_id">
-      <% for owner in @owners %>
-      <option value="<%= owner.id %>"><%= owner.name %></option>
-      <% end %>
-    </select>
-  </label>
 
-  <input class="btn btn--action" type='submit' value="Adoption">
-</form>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/adoptions/new">Make an Adoption!</a>
+</p>

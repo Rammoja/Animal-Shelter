@@ -15,7 +15,7 @@ class Adoption
     sql = "INSERT INTO adoptions
     (
       owner_id, animal_id, adoption_date
-      
+
     )
     VALUES
     (
@@ -26,6 +26,14 @@ class Adoption
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  def get_name_by_id
+    sql = "SELECT breed FROM breeds WHERE id = $1"
+    values = [@breed_id]
+    result = SqlRunner.run(sql, values).first
+    return result['breed']
+  end
+
 
   def self.find( id )
     sql = "SELECT * FROM adoptions WHERE id = $1"

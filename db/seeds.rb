@@ -1,11 +1,13 @@
 require_relative( "../models/owner.rb" )
 require_relative( "../models/animal.rb" )
 require_relative( "../models/breed.rb" )
+require_relative( "../models/adoption.rb" )
 require("pry-byebug")
 
 
-Animal.delete_all()
+Adoption.delete_all()
 Owner.delete_all()
+Animal.delete_all()
 Breed.delete_all()
 
 breed1 = Breed.new({
@@ -69,5 +71,17 @@ owner3 = Owner.new({
     })
 owner3.save()
 
-binding.pry
-nil
+
+adoption1 = Adoption.new({
+  "owner_id" => owner1.id,
+  "animal_id" => animal1.id,
+  "adoption_date" => "3/3/2018"
+  })
+adoption1.save()
+
+adoption2 = Adoption.new({
+  "owner_id" => owner2.id,
+  "animal_id" => animal3.id,
+  "adoption_date" => "22/5/2018"
+  })
+adoption2.save()
