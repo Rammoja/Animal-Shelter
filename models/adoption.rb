@@ -36,13 +36,14 @@ class Adoption
       return result.name
     end
 
-    # def zombie()
-    #   sql = "SELECT * FROM zombies
-    #   WHERE id = $1"
-    #   values = [@zombie_id]
-    #   results = SqlRunner.run( sql, values )
-    #   return Zombie.new( results.first )
-    # end
+    def animal()
+      sql = "SELECT name FROM animals
+      WHERE id = $1"
+      values = [@animal_id]
+      results = SqlRunner.run( sql, values )
+      result = Animal.new( results.first )
+      return result.name
+    end
 
 
 
