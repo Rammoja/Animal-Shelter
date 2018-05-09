@@ -8,13 +8,19 @@
   <label for="age">Age:</label>
   <input type="text" name="age" id="age" >
 
-
   Admission Date:
   <input type="date" name="admission_date" id="admission_date">
   </label>
 
   <label for="status">Status:</label>
   <input type="text" name="status" id="status" >
+
+  <label for="breed_id">Breed</label>
+  <select  name="breed_id" id="breed_id">
+    <% @breeds.each do |breed|  %>
+<option value=<%= breed.id  %>> <%= breed.breed %> </option>
+<%end %>
+  </select>
 
 <input type="submit"  value="Submit">
     </select>

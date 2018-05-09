@@ -49,11 +49,11 @@ class Animal
     SqlRunner.run( sql )
   end
 
-  def get_breed_name_by_id
+  def get_breed
     sql = "SELECT breed FROM breeds WHERE id = $1"
     values = [@breed_id]
     result = SqlRunner.run(sql, values).first
-    return result['breed']
+    return Breed.new(result)
   end
 
 

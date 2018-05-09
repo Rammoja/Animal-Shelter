@@ -9,25 +9,16 @@
         <p class="btn--wrapper">
           <a class="btn btn--action" href="/animals/new">New Animal</a>
         </p>
-
-
       </tr>
     </thead>
     <tbody>
       <% @animals.each { |animal| %>
-      <tr>
-        <td> <a href="/animals/ <%= animal.id %>"> <%= animal.name %></a></td>
-
-
-
-
-        <td>
-
-
-        </td>
-
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
-</section>
+        <tr>
+          <td> <a href="/animals/ <%= animal.id %>"> <%= animal.name %></a></td>
+          <td>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </section>

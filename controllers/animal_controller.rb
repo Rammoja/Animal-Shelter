@@ -14,6 +14,7 @@ end
 
 #NEW
 get '/animals/new' do
+  @breeds = Breed.all()
   erb :"animal/new"
 end
 
