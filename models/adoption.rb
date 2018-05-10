@@ -28,22 +28,22 @@ class Adoption
   end
 
   def owner()
-      sql = "SELECT name FROM owners
-      WHERE id = $1"
-      values = [@owner_id]
-      results = SqlRunner.run( sql, values )
-      result = Owner.new( results.first )
-      return result.name
-    end
+    sql = "SELECT name FROM owners
+    WHERE id = $1"
+    values = [@owner_id]
+    results = SqlRunner.run( sql, values )
+    result = Owner.new( results.first )
+    return result.name
+  end
 
-    def animal()
-      sql = "SELECT name FROM animals
-      WHERE id = $1"
-      values = [@animal_id]
-      results = SqlRunner.run( sql, values )
-      result = Animal.new( results.first )
-      return result.name
-    end
+  def animal()
+    sql = "SELECT name FROM animals
+    WHERE id = $1"
+    values = [@animal_id]
+    results = SqlRunner.run( sql, values )
+    result = Animal.new( results.first )
+    return result.name
+  end
 
   def self.find( id )
     sql = "SELECT * FROM adoptions WHERE id = $1"

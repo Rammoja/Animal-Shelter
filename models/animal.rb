@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Animal
 
   attr_reader( :name, :breed_id, :age, :admission_date, :status, :id )
-
+  
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -30,12 +30,12 @@ class Animal
   end
 
   def self.find( id )
-      sql = "SELECT * FROM animals WHERE id = $1"
-      values = [id]
-      animal = SqlRunner.run( sql, values )
-      result = Animal.new( animal.first )
-      return result
-    end
+    sql = "SELECT * FROM animals WHERE id = $1"
+    values = [id]
+    animal = SqlRunner.run( sql, values )
+    result = Animal.new( animal.first )
+    return result
+  end
 
   def self.all()
     sql = "SELECT * FROM animals"
@@ -55,13 +55,6 @@ class Animal
     result = SqlRunner.run(sql, values).first
     return Breed.new(result)
   end
-
-
-
-  
-
-
-
 
 
 end

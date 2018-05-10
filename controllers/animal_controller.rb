@@ -20,8 +20,8 @@ end
 
 #SHOW
 get '/animals/:id' do
-@animal = Animal.find(params[:id])
-erb(:"animal/show")
+  @animal = Animal.find(params[:id])
+  erb(:"animal/show")
 end
 
 #CREATE

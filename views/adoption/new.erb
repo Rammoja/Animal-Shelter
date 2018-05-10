@@ -2,7 +2,7 @@
 
 <form action="/adoptions" method="post">
   <label>
-  Select a Owner:
+    Select a Owner:
     <select name="owner_id">
       <% for owner in @owners %>
       <option value="<%= owner.id %>"><%= owner.name %></option>
@@ -21,7 +21,7 @@
 
   Adoption Date:
   <input type="date" name="adoption_date" id="adoption_date">
-  </label>
+</label>
 
-  <input class="btn btn--action" type='submit' value="adopt!">
+<input class="btn btn--action" type='submit' value="adopt!">
 </form>

@@ -28,12 +28,12 @@ class Owner
   end
 
   def self.find( id )
-      sql = "SELECT * FROM owners WHERE id = $1"
-      values = [id]
-      owner = SqlRunner.run( sql, values )
-      result = Owner.new( owner.first )
-      return result
-    end
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [id]
+    owner = SqlRunner.run( sql, values )
+    result = Owner.new( owner.first )
+    return result
+  end
 
   def self.all()
     sql = "SELECT * FROM owners"

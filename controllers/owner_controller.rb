@@ -20,8 +20,8 @@ end
 
 #SHOW
 get '/owners/:id' do
-@owner = Owner.find(params[:id])
-erb(:"owner/show")
+  @owner = Owner.find(params[:id])
+  erb(:"owner/show")
 end
 
 #CREATE
