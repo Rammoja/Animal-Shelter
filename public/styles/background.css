@@ -8,7 +8,6 @@ body {
   margin: 0px;
 }
 
-
 h1{
   font-family: Impact;
   margin: 0px;
@@ -16,8 +15,8 @@ h1{
   font-size: 4em;
   color: #E2BA6A;
   margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center;
-
 }
 
 h2{
@@ -26,6 +25,7 @@ h2{
   color: yellow;
   margin-bottom: 20px;
   text-align: center;
+  margin-top: 35px
 }
 
 a {
@@ -41,12 +41,16 @@ a {
   font-size: 1.2em;
 
 
+
+
 }
 .animal {
   margin: 0;
   padding: 0;
   background: #79B0F9;
 
+
+
 }
 .new {
   text-decoration: none;
@@ -59,12 +63,15 @@ a {
   margin: 0;
   padding: 0;
   background: #79B0F9;
+
 }
 .colour {
   text-decoration: none;
   color: #fff;
   display: block;
   font-size: 1.2em;
+  display: inline;
+
 
 }
 .owner {
@@ -77,3 +84,20 @@ a {
   margin: 0;
   padding: 0;
   background: #79B0F9;
+}
+ul li {
+  display: inline;
+  position: relative;
+  left: 295px;
+  border: 1px solid white;
+  background-color: #79B0F9;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-decoration: underline;
+}
+.btn {
+  background-color: red;
+  border: 1px solid white;
+  padding: 6px
+}
