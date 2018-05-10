@@ -2,8 +2,8 @@ body {
   background-image: url('/images/background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  color: salmon;
-  font-family: sans-serif;
+  color: #CD0F29;
+  font-family: serif;
   padding: 0px;
   margin: 0px;
 }
@@ -14,14 +14,14 @@ h1{
   margin: 0px;
   padding: 0px;
   font-size: 4em;
-  color: white;
+  color: #E2BA6A;
   margin-bottom: 20px;
   text-align: center;
 }
 
 h2{
   font-size: 2em;
-  color: grey;
+  color: yellow;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -29,4 +29,33 @@ h2{
 a {
   text-decoration: none;
   color: white;
+}
+
+.animal {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.animal {
+  margin: 0;
+  padding: 0;
+  background: #79B0F9;
+}
+.new {
+  text-decoration: none;
+  color: black;
+  display: block;
+
+}
+
+.new {
+  margin: 0;
+  padding: 0;
+  background: #79B0F9;
+}
+.colour {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+
 }
