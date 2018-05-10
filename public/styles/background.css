@@ -10,16 +10,18 @@ body {
 
 
 h1{
-  font-family: 'Likkle But Wi Tallawah Dog Shelter';
+  font-family: Impact;
   margin: 0px;
   padding: 0px;
   font-size: 4em;
   color: #E2BA6A;
   margin-bottom: 20px;
   text-align: center;
+
 }
 
 h2{
+  font-family: Impact;
   font-size: 2em;
   color: yellow;
   margin-bottom: 20px;
