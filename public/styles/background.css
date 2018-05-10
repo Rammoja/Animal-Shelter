@@ -29,25 +29,30 @@ h2{
 a {
   text-decoration: none;
   color: white;
+  font-size: 1.2em;
 }
 
 .animal {
   text-decoration: none;
   color: black;
   display: block;
+  font-size: 1.2em;
+
+
 }
 .animal {
   margin: 0;
   padding: 0;
   background: #79B0F9;
+
 }
 .new {
   text-decoration: none;
   color: black;
   display: block;
+  font-size: 1.2em;
 
 }
-
 .new {
   margin: 0;
   padding: 0;
@@ -57,5 +62,16 @@ a {
   text-decoration: none;
   color: #fff;
   display: block;
+  font-size: 1.2em;
 
 }
+.owner {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1.2em;
+}
+.owner {
+  margin: 0;
+  padding: 0;
+  background: #79B0F9;
